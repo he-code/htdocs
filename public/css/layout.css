@@ -1,0 +1,401 @@
+@import url('base.css');
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburgesa{
+    width: 2rem;
+    height: 0.25rem;
+    background-color: black;
+    position: relative;
+}
+.hamburgesa::before{
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 0.25rem;
+    background-color: black;
+    bottom:  0.5rem;
+    left: 0;
+}
+.hamburgesa::after{
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 0.25rem;
+    background-color: black;
+    top: 0.5rem;
+    left: 0;
+}
+.salida{
+    background-color: white;
+}
+.salida::before{
+    transform: rotateZ(45deg) translateY(-0.35rem) translateX(0.1rem);
+    transform-origin: left;
+}
+
+.salida::after{
+    transform: rotateZ(-45deg) translateY(0.35rem) translateX(0.1rem);
+    transform-origin: left;
+}
+.hide{
+    display: none !important;
+}
+.menu{
+    position: relative;
+}
+#hamburger{
+    cursor: pointer;
+    width: 2rem;
+    height: calc(0.25*3rem + 0.5*2rem);
+    border: 5px solid #ccc;
+    margin-right: 5rem;
+    padding: 0.025rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#menu-desplegable{
+    position: absolute;
+    width: 15rem;
+    top: calc(0.25*3rem + 0.5*2rem);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 0.125rem;
+    /* background-color: var(--color-dos); */
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+a{
+    text-decoration: none;
+}
+#menu-desplegable a {
+    color: white;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    height: 2.5rem;
+    background-color: var(--color-cuatro);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.5rem;
+
+}
+#menu-desplegable li {
+    list-style: none;
+}
+#menu-desplegable a:last-child {
+    background-color: var(--color-tres);
+}
+.main{
+    flex-grow: 1;
+}
+.formus{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formus form{
+    display: inline-flex;
+    flex-direction: column;
+    width: 25rem;
+    min-height: 10rem;
+    justify-content: space-between;
+    align-items:stretch;
+    padding: 2.5rem;
+    background-color: var(--color-dos);
+    gap: 1rem;
+    border-radius: 0.5rem;
+
+}
+.formus label{
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+
+.formus input{
+    height: 1.8rem;
+}
+.formus input[type="number"]{
+    width: 3rem;
+}
+.formus  button{
+    margin-top: 0.5rem;
+    align-self:  flex-end;
+    padding: 0.8rem;
+    background-color: var(--color-uno);
+    color: black;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+.formus input[type="checkbox"]{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.footer{
+    width: 100%;
+    height: 3rem;
+    background-color: black;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.inicio{
+    width: 60%;
+    margin: auto;
+}
+
+.inicio> h1{
+    text-align: center;
+}
+
+.inicio p {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+.form-externo{
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.form-externo label:first-child{
+    margin-top: 2rem;
+}
+
+.form-externo input{
+    height: 1.8rem;
+    width: 15rem;
+}
+.form-externo button{
+    margin-top: 0.2rem;
+    align-self:  center;
+    padding: 0.8rem;
+    background-color: var(--color-uno);
+    color: black;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.vinculo{
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    cursor: pointer;
+}
+
+.content-acta{
+    width: 700px;
+    margin: auto;
+    min-height: 100vh;
+    
+}
+
+.items-acta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+.primero-items{
+  width: calc((690px / 2) + 80px ) ;
+  display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.segundo-items{
+    width: calc((690px / 2) - 80px );
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.items-acta li{
+    list-style: none;
+    width: 100%;
+}
+.items-acta span{
+    font-weight: bold;
+}
+.materiales-acta {
+    margin-top: 1.5rem;
+}
+
+.materiales-acta table{
+    border-collapse: collapse;
+
+}
+
+.materiales-acta th , td{
+    border: 1px solid black;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.firma{
+    width: 200px;
+    margin-top: 6rem;
+}
+.firma > div {
+    border-top: 1px dashed black;
+}
+.button-pdf{
+    position: fixed;
+    top:3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2rem;
+}
+.button-pdf button{
+    margin-top: 0.2rem;
+    align-self:  center;
+    padding: 0.8rem;
+    background-color: var(--color-uno);
+    color: black;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+.items-materiales {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.items-materiales section{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-acta-s{
+    text-align: center;
+    background-color: #bfbfbf;
+}
+
+.direccion-acta-s{
+    
+    text-align: end;
+    width: 100%;
+    margin-top: -0.9rem;
+}
+.notificacion-acta-s{
+    text-align: center;
+    font-weight: bold;
+    padding: 0.25rem;
+}
+.mensaje-acta-s{
+    text-align: justify;
+}
+.item-acta-s{
+    width: 100%;
+}
+.item-acta-s > table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+.item-acta-s > table th{
+    border: 1px solid black;
+    padding: 0.5rem;
+    background-color: #f2f2f2;
+}
+
+.item-acta-s > table > tbody >tr > td:first-child{
+    width: 60%;
+    text-align: start;
+}
+.end{
+    text-align: end !important;
+}
+.firmas-acta-s{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 12rem;
+    margin-top: 2.5rem;
+}
+.firmas-acta-s > div{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+.firmas-acta-s > div > p:first-child{
+    text-align: center;
+}
+.firmas-acta-s > div > p:last-child{
+    border-top: 1px solid black;
+}
+.img-acta-s > img{
+    width: 300px;
+    height: 70px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.error{
+    padding: 1rem;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+}
+.exito{
+    padding: 1rem;
+    background-color: rgba(0,255, 0, 0.5);
+    color: white;
+    text-align: center;
+}

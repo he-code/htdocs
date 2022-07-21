@@ -1,0 +1,17 @@
+@import url('base.css');
+.formus form > button{
+    transition: all 0.5s;
+}
+.formus form > button:hover{
+    transform: scale(1.1);
+}
+#menu-desplegable a {
+    transition: all 0.25s;
+}
+
+#menu-desplegable a:hover{
+    background-color: black;
+}
+#menu-desplegable a:last-child:hover{
+    background-color: var(--color-tres);
+}
